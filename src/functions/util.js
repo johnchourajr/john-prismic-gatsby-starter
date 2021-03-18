@@ -7,7 +7,7 @@
 export function clampBuilder(minFontSize, maxFontSize) {
   const pixelsPerRem = 16;
   const minWidth = 375 / pixelsPerRem;
-  const maxWidth = 2630 / pixelsPerRem;
+  const maxWidth = 1440 / pixelsPerRem;
 
   const slope = (maxFontSize - minFontSize) / (maxWidth - minWidth);
   const yAxisIntersection = -minWidth * slope + minFontSize;

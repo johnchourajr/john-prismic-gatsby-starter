@@ -52,14 +52,16 @@ export const colors = {
  * fonts const
  *
  * All dynamic font sizes
+ * The min end of the scale uses the modular scale of 1.125 (https://www.modularscale.com/?1&em&1.125)
+ * The max end of the scale uses the modular scale of 1.5 (https://www.modularscale.com/?1&em&1.5)
  */
 export const fonts = {
-  h1: clampBuilder(2.5, 9),
-  h2: clampBuilder(2, 6.25),
-  h3: clampBuilder(1.5, 3),
-  h4: clampBuilder(0.9, 1),
-  h5: clampBuilder(0.85, 0.9),
-  h6: clampBuilder(0.6, 0.7)
+  h1: clampBuilder(1.802, 7.594),
+  h2: clampBuilder(1.602, 5.063),
+  h3: clampBuilder(1.424, 3.375),
+  h4: clampBuilder(1.266, 2.25),
+  h5: clampBuilder(1.125, 1.5),
+  h6: clampBuilder(1, 1)
 };
 
 /**

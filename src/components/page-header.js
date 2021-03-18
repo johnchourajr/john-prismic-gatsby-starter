@@ -47,6 +47,7 @@ const PageHeaderWrapper = styled(m.div)`
   justify-content: flex-start;
   text-align: center;
   overflow: visible;
+  padding-top: 8rem;
   height: 50vh;
   min-height: 50vw;
   min-height: 500px;

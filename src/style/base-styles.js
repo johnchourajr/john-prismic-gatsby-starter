@@ -26,48 +26,6 @@ const BaseStyles = createGlobalStyle`
     min-height: 100vh;
   }
 
-  a {
-    text-decoration: none;
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      opacity: 0;
-      background: black;
-      transition: opacity ${(props) => props.theme.animation.duration[200].css}
-      ${(props) => props.theme.animation.timingFunction.css};
-    }
-
-    &.no-underline, &.button {
-      &:after {
-        opacity: 0;
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        text-decoration: none;
-
-        &:after {
-          opacity: 1;
-        }
-
-        p {
-          text-decoration: none;
-        }
-
-        * {
-          text-decoration: none !important;
-        }
-      }
-    }
-  }
-
   *:focus-visible {
     outline: none;
     position: relative;
@@ -123,9 +81,9 @@ const BaseStyles = createGlobalStyle`
   .h3,
   h4,
   .h4 {
-    font-weight: 100;
-    line-height: 108%;
-    letter-spacing: 0.01em;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.01em;
     margin-left: -0.02em;
   }
 
@@ -165,7 +123,7 @@ const BaseStyles = createGlobalStyle`
   .h6 {
     font-weight: 400;
     font-style: normal;
-    font-size: ${(props) => props.theme.fonts.h5};
+    font-size: ${(props) => props.theme.fonts.h6};
     line-height: 120%;
     letter-spacing: 0.105em;
     text-transform: uppercase;
