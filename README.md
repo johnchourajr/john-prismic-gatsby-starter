@@ -4,7 +4,7 @@ john-prismic-gatsby-starter
 
 ## 🚀 Quick start
 
-    ```shell
-    cd john-prismic-gatsby-starter
-    yarn start
-    ```
+```
+cd john-prismic-gatsby-starter
+yarn start
+```
