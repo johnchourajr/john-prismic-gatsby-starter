@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
  * TODO: need an OG Image and description
  * */
 export const meta = {
-  siteUrl: 'https://prismic-gatsby.john.design',
+  siteUrl: 'https://john-prismic-gatsby-starter.john.design/',
   description: '...',
   og: '...'
 };
@@ -16,7 +16,7 @@ export const meta = {
  * @param {Object} props
  */
 function Head({ pageContext }) {
-  const title = `Prismic Gatsby ${
+  const title = `John Prismic Gatsby Starter ${
     pageContext.title && `— ${pageContext.title}`
   }`;
 

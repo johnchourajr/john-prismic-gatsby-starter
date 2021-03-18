@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Box from './box';
+import Box from '.';
 import styled from 'styled-components';
 
 export default function ImageBox({ fluid, ...rest }) {

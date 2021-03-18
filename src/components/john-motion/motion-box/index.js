@@ -23,7 +23,7 @@ export default function Box({
   }, [controls, inView]);
 
   const boxVariants = {
-    hidden: { opacity: 0, scale: 0.97, y: 10, ...hiddenStyles },
+    hidden: { opacity: 0, scale: 1, y: 10, ...hiddenStyles },
     visible: {
       opacity: 1,
       scale: 1,

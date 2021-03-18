@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CoverFallback from './video-cover-fallback';
+import CoverFallback from './fallback';
 
 function VideoCover(props) {
   const style = {

@@ -6,7 +6,7 @@ import styled from 'styled-components';
  */
 import { Wrapper } from '../components/layout-components';
 import { changeTheme } from '../functions/util';
-import Box from '../components/box';
+import Box from '../components/john-motion/motion-box';
 
 /**
  * FourOhFour Component

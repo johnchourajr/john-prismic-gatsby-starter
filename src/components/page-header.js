@@ -5,13 +5,13 @@ import { motion as m } from 'framer-motion';
 /**
  * Local Components
  */
-import MotionScroll from './motion-scroll';
+import MotionScroll from './john-motion/motion-scroll';
 
 /**
  * Local Styles/JS
  */
 import { Wrapper } from './layout-components';
-import AnimatedText from './animated-text';
+import AnimatedText from './john-motion/motion-headline';
 
 /**
  * PageHeader Component
@@ -45,10 +45,8 @@ const PageHeaderWrapper = styled(m.div)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  text-align: center;
+  text-align: left;
   overflow: visible;
-  padding-top: 8rem;
-  height: 50vh;
   min-height: 50vw;
-  min-height: 500px;
+  padding: 15vw 0 10vw;
 `;

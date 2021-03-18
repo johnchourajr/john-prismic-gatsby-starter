@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, useViewportScroll } from 'framer-motion';
-import Link from '../link';
+import Link from '../john-gatsby-helpers/link';
 
 /**
  * Data hooks

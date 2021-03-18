@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import { wrapHeadlineInArray } from '../functions/util';
-import { animation } from '../style/theme';
+import { wrapHeadlineInArray } from '../../../functions/util';
+import { animation } from '../../../style/theme';
 
-export default function AnimatedText({
+export default function MotionHeadline({
   text,
   staggerChildren = 0.1,
   triggerOnce = true,
@@ -74,8 +74,8 @@ export default function AnimatedText({
 }
 
 const P = styled(motion.p)`
-  margin-left: -0.12em;
-  margin-right: -0.12em;
+  margin-left: -0.16em;
+  margin-right: -0.16em;
 `;
 
 const Mask = styled.span`
@@ -83,7 +83,7 @@ const Mask = styled.span`
   overflow: hidden;
   display: inline-block;
   padding: 0.2em 0.12em;
-  margin-bottom: -0.4em;
+  margin-bottom: -1em;
 
   > span,
   > em {

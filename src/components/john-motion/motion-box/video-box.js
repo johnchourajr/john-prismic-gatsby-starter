@@ -1,6 +1,6 @@
 import React from 'react';
-import Box from './box';
-import VideoCover from './video-cover/video-cover';
+import Box from '.';
+import VideoCover from '../../john-inline-video';
 
 export default function VideoBox({ video, ...rest }) {
   const videoOptions = {

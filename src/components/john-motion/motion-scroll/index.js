@@ -9,7 +9,7 @@ import {
 /**
  * Local Theme
  */
-import { animation } from '../style/theme';
+import { animation } from '../../../style/theme';
 
 const physics = { damping: 15, mass: 0.27, stiffness: 55 }; // easing of smooth scroll
 

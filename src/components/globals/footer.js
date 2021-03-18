@@ -4,9 +4,9 @@ import styled from 'styled-components';
 /**
  *
  */
-import LinkExternal from '../link-external';
+import LinkExternal from '../john-gatsby-helpers/link-external';
 import useNavData from '../../hooks/use-nav-data';
-import Link from '../link';
+import Link from '../john-gatsby-helpers/link';
 
 /**
  * Footer component

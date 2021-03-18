@@ -1,10 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { RichText } from 'prismic-reactjs';
 
 import { Wrapper } from '../components/layout-components';
 import PageHeader from '../components/page-header';
 import styled from 'styled-components';
-import LinkExternal from '../components/link-external';
+import Box from '../components/john-motion/motion-box';
 
 /**
  * page-template Component
@@ -19,43 +20,21 @@ export default function Template({
 }) {
   return (
     <>
-      <PageHeader title={data.title} />
+      <PageHeader title={data.headline ? data.headline : data.title} />
       <Grid>
-        <h4>
-          Hey there, this is{' '}
-          <LinkExternal
-            blank
-            href="https://github.com/johnchourajr/john-prismic-gatsby-starter"
-          >
-            john-prismic-gatsby-starter
-          </LinkExternal>
-          , a starter that I use for a lot of projects.
-        </h4>
-        <br />
-        <h5>What does it do?</h5>
-        <p>
-          Lots! It sets up a basic Gatsby site that uses Prismic as the headless
-          CMS. All pages are generated based on CMS entries. It also includes
-          some goodies that I use a lot. For instance, Framer Motion, for motion
-          goodness in the Nav, Box, MotionScroll components. Plus some other
-          Gatsby-Prismic helper components like ImageBox, VideoBox, Link, and
-          LinkExternal.
-        </p>
+        <Box>
+          <RichText render={data.body.raw} />
+        </Box>
       </Grid>
     </>
   );
 }
 
 const Grid = styled(Wrapper)`
-  h1,
-  h2,
-  h3,
-  h4 {
-    max-width: 20em;
-  }
+  max-width: 100%;
 
-  p {
-    max-width: 35em;
+  @media ${(props) => props.theme.device.laptop} {
+    max-width: 50%;
   }
 `;
 
@@ -68,6 +47,12 @@ export const pageQuery = graphql`
       uid
       data {
         title
+        headline
+        body {
+          raw
+          text
+          html
+        }
       }
     }
   }
