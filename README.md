@@ -1,5 +1,5 @@
 <h1 align="center">
-  prismic-gatsby-starter
+john-prismic-gatsby-starter
 </h1>
 
 ## 🚀 Quick start
