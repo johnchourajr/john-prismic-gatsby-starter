@@ -5,6 +5,6 @@
 ## 🚀 Quick start
 
     ```shell
-    cd prismic-gatsby-starter
+    cd john-prismic-gatsby-starter
     yarn start
     ```
