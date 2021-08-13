@@ -53,7 +53,8 @@ const FooterContainer = styled.footer`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: ${(props) => props.theme.layout.space[200]} 0;
+  padding: ${(props) => props.theme.layout.space[300]} 0
+    ${(props) => props.theme.layout.space[200]};
 `;
 
 const FooterLinksWrapper = styled.div`

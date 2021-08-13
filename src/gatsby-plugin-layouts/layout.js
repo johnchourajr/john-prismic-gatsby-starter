@@ -3,14 +3,14 @@ import React, { useEffect } from 'react';
 /**
  * Local Components
  */
-import Head from './globals/head';
-import Nav from './globals/nav';
-import Footer from './globals/footer';
+import Head from '../components/globals/head';
+import Nav from '../components/globals/nav';
+import Footer from '../components/globals/footer';
 
 /**
  * Local styles
  */
-import { PageWrapper } from './layout-components';
+import { PageWrapper } from '../components/globals/wrappers';
 
 /**
  * Code Highlighting styles

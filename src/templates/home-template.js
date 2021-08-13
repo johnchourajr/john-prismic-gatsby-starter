@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { RichText } from 'prismic-reactjs';
 
-import { Wrapper } from '../components/layout-components';
-import PageHeader from '../components/page-header';
+import { Wrapper } from '../components/globals/wrappers';
+import PageHeader from '../components/globals/header';
 import styled from 'styled-components';
 import Box from '../components/john-motion/motion-box';
 

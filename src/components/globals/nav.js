@@ -50,7 +50,7 @@ export default function Nav(props) {
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.8 }}
       >
         <Link className="button" to="/">
-          Logo
+          JPGS
         </Link>
         <NavLinksWrapper>
           {navData.map(({ node: { data, url } }, i) => {

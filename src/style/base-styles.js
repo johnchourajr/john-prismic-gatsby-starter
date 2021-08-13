@@ -179,37 +179,6 @@ const BaseStyles = createGlobalStyle`
   .gatsby-resp-image-image {
     box-shadow: none !important;
   }
-
-  .ReactModal__Overlay {
-    opacity: 0;
-    will-change: opacity;
-    transition: opacity ${(props) => props.theme.animation.duration[100].css}
-        ${(props) => props.theme.animation.timingFunction.css};
-
-  }
-
-  .ReactModal__Content {
-    transition: transform ${(props) => props.theme.animation.duration[100].css}
-        ${(props) => props.theme.animation.timingFunction.css};
-    transform: translateY(50%);
-    will-change: transform;
-  }
-
-  .ReactModal__Overlay--after-open{
-    opacity: 1;
-
-    .ReactModal__Content {
-      transform: none;
-    }
-  }
-
-  .ReactModal__Overlay--before-close{
-    opacity: 0;
-
-    .ReactModal__Content {
-      transform: translateY(50%);
-    }
-  }
 `;
 
 export default BaseStyles;

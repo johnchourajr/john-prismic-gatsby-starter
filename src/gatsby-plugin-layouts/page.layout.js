@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * Base Layout Component
  */
-import Layout from '../components/layout';
+import Layout from './layout';
 
 /**
  * Base Styles

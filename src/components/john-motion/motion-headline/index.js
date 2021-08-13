@@ -29,7 +29,7 @@ export default function MotionHeadline({
     active: {
       transition: {
         staggerChildren: staggerChildren,
-        duration: 2,
+        duration: 1,
         ease: [animation.timingFunction.js]
       }
     }
@@ -38,15 +38,15 @@ export default function MotionHeadline({
   const textVariants = {
     pre: {
       opacity: 0,
-      rotate: '-3deg',
-      y: '140%'
+      rotate: '6deg',
+      y: '50%'
     },
     active: {
       opacity: 1,
       rotate: '0deg',
       y: '0%',
       transition: {
-        duration: 0.9,
+        duration: 0.5,
         ease: [animation.timingFunction.js]
       }
     }

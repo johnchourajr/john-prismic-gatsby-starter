@@ -4,7 +4,7 @@ import styled from 'styled-components';
 /**
  * Local Components
  */
-import { Wrapper } from '../components/layout-components';
+import { Wrapper } from '../components/globals/wrappers';
 import { changeTheme } from '../functions/util';
 import Box from '../components/john-motion/motion-box';
 

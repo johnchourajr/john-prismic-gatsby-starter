@@ -5,13 +5,13 @@ import { motion as m } from 'framer-motion';
 /**
  * Local Components
  */
-import MotionScroll from './john-motion/motion-scroll';
+import MotionScroll from '../john-motion/motion-scroll';
 
 /**
  * Local Styles/JS
  */
-import { Wrapper } from './layout-components';
-import AnimatedText from './john-motion/motion-headline';
+import { Wrapper } from './wrappers';
+import AnimatedText from '../john-motion/motion-headline';
 
 /**
  * PageHeader Component
