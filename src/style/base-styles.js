@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const BaseStyles = createGlobalStyle`
+
   html {
     scroll-behavior: smooth;
   }
@@ -11,9 +12,10 @@ const BaseStyles = createGlobalStyle`
   }
 
   body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      background-color: ${(props) => props.theme.colors.white};
-      color: ${(props) => props.theme.colors.black};
+    font-family: 'GTHaptikRegular', sans-serif;
+    background-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.black};
+    fill: ${({ theme }) => theme.colors.black};
   }
 
   * {
@@ -81,50 +83,47 @@ const BaseStyles = createGlobalStyle`
   .h3,
   h4,
   .h4 {
-    font-weight: 600;
-    line-height: 130%;
-    letter-spacing: -0.01em;
     margin-left: -0.02em;
+    font-feature-settings: 'ss04' on, 'ss03' on, 'ss02' on, 'ss01' on, 'salt' on;
   }
 
   h1,
   .h1 {
     font-size: ${(props) => props.theme.fonts.h1};
+    line-height: 110%;
   }
 
   h2,
   .h2 {
     font-size: ${(props) => props.theme.fonts.h2};
+    line-height: 110%;
   }
 
   h3,
   .h3 {
     font-size: ${(props) => props.theme.fonts.h3};
+    line-height: 110%;
   }
 
   h4,
   .h4 {
     font-size: ${(props) => props.theme.fonts.h4};
+    line-height: 115%;
   }
 
   h5,
   .h5 {
-    font-weight: 400;
-    font-style: normal;
     font-size: ${(props) => props.theme.fonts.h5};
-    line-height: 120%;
-    letter-spacing: 0.105em;
-    text-transform: uppercase;
+    line-height: 130%;
     font-feature-settings: 'ss02' on, 'ss05' on, 'cpsp' on, 'calt' off,
       'liga' off;
   }
 
   h6,
   .h6 {
-    font-weight: 400;
-    font-style: normal;
+    font-family: "GTHaptikMedium";
     font-size: ${(props) => props.theme.fonts.h6};
-    line-height: 120%;
+    line-height: 130%;
     letter-spacing: 0.105em;
     text-transform: uppercase;
     font-feature-settings: 'ss02' on, 'ss05' on, 'cpsp' on, 'calt' off,
@@ -133,7 +132,6 @@ const BaseStyles = createGlobalStyle`
 
   p,
   .p {
-    font-family: interstate, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;

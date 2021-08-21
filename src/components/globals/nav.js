@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import { motion, useViewportScroll } from 'framer-motion';
-import Link from '../john-gatsby-helpers/link';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import { motion, useViewportScroll } from "framer-motion";
+import Link from "../john-gatsby-helpers/link";
 
 /**
  * Data hooks
  */
-import useNavData from '../../hooks/use-nav-data';
+import useNavData from "../../hooks/use-nav-data";
 
 /**
  * Nav component
@@ -35,17 +35,17 @@ export default function Nav(props) {
       opacity: 0,
       y: -10,
       transition: {
-        delay: 0.3
-      }
+        delay: 0.3,
+      },
     },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <>
       <NavWrapper
         initial="pre"
-        animate={hidden ? 'hidden' : 'visible'}
+        animate={hidden ? "hidden" : "visible"}
         variants={wrapperVariants}
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.8 }}
       >
@@ -53,8 +53,8 @@ export default function Nav(props) {
           JPGS
         </Link>
         <NavLinksWrapper>
-          {navData.map(({ node: { data, url } }, i) => {
-            const pathUrl = url === '/home' ? `/` : `${url}`;
+          {navData.map(({ node: { data, uid } }, i) => {
+            const pathUrl = uid === "home" ? `/` : `/${uid}`;
             return (
               <Link key={i} to={pathUrl}>
                 {data.title}

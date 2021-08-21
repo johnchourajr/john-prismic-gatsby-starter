@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from "gatsby";
 
 export const useNavData = () => {
   const data = useStaticQuery(
@@ -14,7 +14,6 @@ export const useNavData = () => {
             node {
               id
               uid
-              url
               data {
                 title
                 nav_order

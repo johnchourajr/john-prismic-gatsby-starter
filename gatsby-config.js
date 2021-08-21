@@ -1,63 +1,62 @@
-require('dotenv').config({
-  path: `.env`
+require("dotenv").config({
+  path: `.env`,
 });
 
-const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer');
+const { siteMetadata, prismicConfig } = require("./jpgs-config");
+const prismicHtmlSerializer = require("./src/gatsby/htmlSerializer");
 
 module.exports = {
   siteMetadata: {
-    title: `prismic-gatsby-starter`,
-    description: `prismic-gatsby-starter`,
-    siteUrl: 'https://prismic-gatsby.john.design'
+    ...siteMetadata,
   },
   plugins: [
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: 'john-prismic-gatsby-starter',
+        repositoryName: prismicConfig.repositoryName,
         accessToken: `${process.env.API_KEY}`,
         linkResolver: () => (post) => `/${post.uid}`,
         htmlSerializer: () => prismicHtmlSerializer,
         schemas: {
-          page: require('./src/schemas/page.json')
+          page: require("./src/schemas/page.json"),
         },
-        lang: '*'
-      }
+        lang: "en-us",
+      },
     },
     `gatsby-remark-images`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `prismic-gatsby-starter`,
-        short_name: `prismic-gatsby-starter`,
+        name: siteMetadata.title,
+        short_name: siteMetadata.title,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#000000`,
         display: `standalone`,
-        icon: 'src/images/icon.png'
-      }
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
-    'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images/`
+        icon: "src/images/icon.png",
       },
-      __key: 'images'
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images/`,
+      },
+      __key: "images",
     },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: false
-      }
+        displayName: false,
+      },
     },
-    'gatsby-plugin-layouts',
+    "gatsby-plugin-layouts",
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-image`
-  ]
+    `gatsby-plugin-image`,
+  ],
 };

@@ -1,13 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { siteMetadata } from '../../../jpgs-config';
 
-/**
- * TODO: need an OG Image and description
- * */
 export const meta = {
-  siteUrl: 'https://john-prismic-gatsby-starter.john.design/',
-  description: '...',
-  og: '...'
+  siteUrl: siteMetadata.siteUrl,
+  siteTitle: siteMetadata.title,
+  description: siteMetadata.description,
+  og: siteMetadata.ogImage
 };
 
 /**
@@ -16,9 +15,11 @@ export const meta = {
  * @param {Object} props
  */
 function Head({ pageContext }) {
-  const title = `John Prismic Gatsby Starter ${
+  const title = `${meta.siteTitle} ${
     pageContext.title && `— ${pageContext.title}`
   }`;
+
+  console.log(pageContext);
 
   return (
     <Helmet

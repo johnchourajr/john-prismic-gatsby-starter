@@ -14,12 +14,12 @@ import ResetStyles from '../style/reset-styles';
 import BaseStyles from '../style/base-styles';
 import AnimationStyles from '../style/animation-styles';
 
-const PageLayout = ({ children, pageContext }) => (
+const PageLayout = ({ children, pageContext, ...rest }) => (
   <ThemeProvider theme={theme}>
     <ResetStyles />
     <BaseStyles />
     <AnimationStyles />
-    <Layout pageContext={pageContext}>{children}</Layout>
+    <Layout pageContext={pageContext} {...rest}>{children}</Layout>
   </ThemeProvider>
 );
 

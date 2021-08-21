@@ -24,10 +24,11 @@ import { PageWrapper } from '../components/globals/wrappers';
  * @param {Object} props.pageContext
  * @returns page layouts
  */
-export default function Layout({ children, pageContext }) {
+export default function Layout({ children, pageContext, ...rest }) {
   useEffect(() => {
     return () => {};
   });
+  console.log(rest);
   return (
     <>
       <Head pageContext={pageContext} />
