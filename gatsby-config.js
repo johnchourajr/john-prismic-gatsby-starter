@@ -16,6 +16,7 @@ module.exports = {
         repositoryName: `${process.env.REPO}`,
         accessToken: `${process.env.API_KEY}`,
         linkResolver: require("./src/functions/linkResolver").linkResolver,
+        htmlSerializer: () => prismicHtmlSerializer,
         schemas: {
           page: require("./src/schemas/page.json"),
           homepage: require("./src/schemas/homepage.json"),
