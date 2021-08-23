@@ -1,11 +1,11 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { RichText } from 'prismic-reactjs';
+import React from "react";
+import { graphql } from "gatsby";
 
-import { Wrapper } from '../components/globals/wrappers';
-import PageHeader from '../components/globals/header';
-import styled from 'styled-components';
-import Box from '../components/john-motion/motion-box';
+import { Wrapper } from "../components/globals/wrappers";
+import PageHeader from "../components/globals/header";
+import styled from "styled-components";
+import Box from "../components/motion/motion-box";
+import RichText from "../components/helpers/rich-text";
 
 /**
  * page-template Component
@@ -13,10 +13,10 @@ import Box from '../components/john-motion/motion-box';
  * @param {Object} props
  * @param {Object} props.data
  */
-export default function Template({
+export function HomeTemplate({
   data: {
-    prismicPage: { data }
-  }
+    prismicHomepage: { data },
+  },
 }) {
   return (
     <>
@@ -42,9 +42,10 @@ const Grid = styled(Wrapper)`
  * pageQuery
  */
 export const pageQuery = graphql`
-  query HomePage($uid: String!) {
-    prismicPage(uid: { eq: $uid }) {
+  query HomePageTemplate {
+    prismicHomepage {
       uid
+      url
       data {
         title
         headline
@@ -57,3 +58,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default HomeTemplate;

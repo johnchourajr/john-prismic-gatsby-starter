@@ -2,8 +2,8 @@ require("dotenv").config({
   path: `.env`,
 });
 
-const { siteMetadata, prismicConfig } = require("./jpgs-config");
-const prismicHtmlSerializer = require("./src/gatsby/htmlSerializer");
+const { siteMetadata } = require("./jpgs-config");
+const prismicHtmlSerializer = require("./src/gatsby/html-serializer");
 
 module.exports = {
   siteMetadata: {
@@ -13,12 +13,13 @@ module.exports = {
     {
       resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: prismicConfig.repositoryName,
+        repositoryName: `${process.env.REPO}`,
         accessToken: `${process.env.API_KEY}`,
-        linkResolver: () => (post) => `/${post.uid}`,
+        linkResolver: require("./src/functions/linkResolver").linkResolver,
         htmlSerializer: () => prismicHtmlSerializer,
         schemas: {
           page: require("./src/schemas/page.json"),
+          homepage: require("./src/schemas/homepage.json"),
         },
         lang: "en-us",
       },

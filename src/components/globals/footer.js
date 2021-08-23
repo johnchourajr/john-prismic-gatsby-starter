@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 /**
  *
  */
-import LinkExternal from '../john-gatsby-helpers/link-external';
-import useNavData from '../../hooks/use-nav-data';
-import Link from '../john-gatsby-helpers/link';
+import LinkExternal from "../helpers/link-external";
+import useNavData from "../../hooks/use-nav-data";
+import Link from "../helpers/link";
 
 /**
  * Footer component
@@ -21,8 +21,8 @@ export default function Footer({ pageContext }) {
     <FooterContainer id="footer" data-page={pageContext.uid}>
       <FooterRow className="links">
         <FooterLinksWrapper>
-          {navData.map(({ node: { data, url } }, i) => {
-            const pathUrl = url === '/home' ? `/` : `${url}`;
+          {navData.map(({ node: { data, uid } }, i) => {
+            const pathUrl = uid === "home" ? `/` : `/${uid}`;
             return (
               <Link key={i} to={pathUrl}>
                 {data.title}
@@ -31,7 +31,7 @@ export default function Footer({ pageContext }) {
           })}
         </FooterLinksWrapper>
         <LegalWrapper>
-          © Copyright 2021 John Choura. Site by{' '}
+          © Copyright 2021 John Choura. Site by{" "}
           <LinkExternal href="https://john.design">John Choura</LinkExternal>.
         </LegalWrapper>
       </FooterRow>
@@ -64,6 +64,6 @@ const FooterLinksWrapper = styled.div`
   gap: ${(props) => props.theme.layout.space[200]};
 `;
 
-const LegalWrapper = styled.h6`
+const LegalWrapper = styled.p`
   margin: 0;
 `;

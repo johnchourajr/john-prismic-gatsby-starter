@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 /**
  * Local Components
  */
-import { Wrapper } from '../components/globals/wrappers';
-import { changeTheme } from '../functions/util';
-import Box from '../components/john-motion/motion-box';
+import { Wrapper } from "../components/globals/wrappers";
+import { changeTheme } from "../functions/util";
+import Box from "../components/motion/motion-box";
 
 /**
  * FourOhFour Component
@@ -16,7 +16,7 @@ import Box from '../components/john-motion/motion-box';
  */
 export default function FourOhFour({ path }) {
   React.useEffect(() => {
-    changeTheme('#000000', 'red');
+    changeTheme("#000000", "red");
     return () => {
       changeTheme(null, null);
     };

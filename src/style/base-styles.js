@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const BaseStyles = createGlobalStyle`
 
@@ -121,7 +121,6 @@ const BaseStyles = createGlobalStyle`
 
   h6,
   .h6 {
-    font-family: "GTHaptikMedium";
     font-size: ${(props) => props.theme.fonts.h6};
     line-height: 130%;
     letter-spacing: 0.105em;

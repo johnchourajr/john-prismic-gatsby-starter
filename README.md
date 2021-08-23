@@ -18,4 +18,4 @@ yarn start
 
 ## Dive in
 
-All of
+Customize everything in the `src/style/base-styles.js` and `src/style/theme.js` files.

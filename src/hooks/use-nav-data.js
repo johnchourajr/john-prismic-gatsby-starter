@@ -14,6 +14,7 @@ export const useNavData = () => {
             node {
               id
               uid
+              url
               data {
                 title
                 nav_order

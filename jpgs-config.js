@@ -5,7 +5,4 @@ module.exports = {
     siteUrl: "https://john-prismic-gatsby-starter.john.design/",
     ogImage: "",
   },
-  prismicConfig: {
-    repositoryName: "john-prismic-gatsby-starter",
-  },
 };

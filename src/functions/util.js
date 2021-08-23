@@ -1,4 +1,17 @@
 /**
+ * Simplified modular scale.
+ *
+ * @param {Number} v Value
+ * @param {Number} base Base (rem) to scale
+ * @param {Number} ratio Ratio to scale
+ * @returns {Number} modular scale
+ * @private
+ */
+export function ms(v, base = 1, ratio = 1.125) {
+  return Math.pow(ratio, v) * base;
+}
+
+/**
  *
  * @param {String|Number} text
  * @returns {String}

@@ -1,17 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { motion as m } from 'framer-motion';
+import React from "react";
+import styled from "styled-components";
+import { motion as m } from "framer-motion";
 
 /**
  * Local Components
  */
-import MotionScroll from '../john-motion/motion-scroll';
+import MotionScroll from "../motion/motion-scroll";
 
 /**
  * Local Styles/JS
  */
-import { Wrapper } from './wrappers';
-import AnimatedText from '../john-motion/motion-headline';
+import { Wrapper } from "./wrappers";
+import AnimatedText from "../motion/motion-headline";
 
 /**
  * PageHeader Component
@@ -22,7 +22,7 @@ import AnimatedText from '../john-motion/motion-headline';
 export default function PageHeader({ title }) {
   const variants = {
     visible: { opacity: 1 },
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 },
   };
 
   return (
@@ -49,4 +49,5 @@ const PageHeaderWrapper = styled(m.div)`
   overflow: visible;
   min-height: 50vw;
   padding: 15vw 0 10vw;
+  max-width: 55em;
 `;
