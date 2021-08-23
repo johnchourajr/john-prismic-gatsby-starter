@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { motion, useViewportScroll } from "framer-motion";
+import { m, LazyMotion, domAnimation, useViewportScroll } from "framer-motion";
 import Link from "../helpers/link";
 
 /**
@@ -42,7 +42,7 @@ export default function Nav(props) {
   };
 
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       <NavWrapper
         initial="pre"
         animate={hidden ? "hidden" : "visible"}
@@ -63,11 +63,11 @@ export default function Nav(props) {
           })}
         </NavLinksWrapper>
       </NavWrapper>
-    </>
+    </LazyMotion>
   );
 }
 
-const NavWrapper = styled(motion.nav)`
+const NavWrapper = styled(m.nav)`
   display: flex;
   position: fixed;
   align-items: center;

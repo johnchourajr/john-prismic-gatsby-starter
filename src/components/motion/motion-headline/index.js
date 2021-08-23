@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import { m, LazyMotion, domAnimation, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-import { wrapHeadlineInArray } from '../../../functions/util';
-import { animation } from '../../../style/theme';
+import { wrapHeadlineInArray } from "../../../functions/util";
+import { animation } from "../../../style/theme";
 
 export default function MotionHeadline({
   text,
@@ -17,10 +17,10 @@ export default function MotionHeadline({
 
   useEffect(() => {
     if (inView) {
-      controls.start('active');
+      controls.start("active");
     }
     if (!inView) {
-      controls.start('pre');
+      controls.start("pre");
     }
   }, [controls, inView]);
 
@@ -30,50 +30,52 @@ export default function MotionHeadline({
       transition: {
         staggerChildren: staggerChildren,
         duration: 1,
-        ease: [animation.timingFunction.js]
-      }
-    }
+        ease: [animation.timingFunction.js],
+      },
+    },
   };
 
   const textVariants = {
     pre: {
       opacity: 0,
-      rotate: '6deg',
-      y: '50%'
+      rotate: "6deg",
+      y: "50%",
     },
     active: {
       opacity: 1,
-      rotate: '0deg',
-      y: '0%',
+      rotate: "0deg",
+      y: "0%",
       transition: {
         duration: 0.5,
-        ease: [animation.timingFunction.js]
-      }
-    }
+        ease: [animation.timingFunction.js],
+      },
+    },
   };
 
   const array = wrapHeadlineInArray(text);
 
   return (
-    <P
-      ref={ref}
-      variants={textContainerVariants}
-      initial="pre"
-      animate={controls}
-      {...rest}
-    >
-      {array.map((item, i) => {
-        return (
-          <Mask key={i}>
-            <motion.span variants={textVariants}>{item.text}</motion.span>
-          </Mask>
-        );
-      })}
-    </P>
+    <LazyMotion features={domAnimation}>
+      <P
+        ref={ref}
+        variants={textContainerVariants}
+        initial="pre"
+        animate={controls}
+        {...rest}
+      >
+        {array.map((item, i) => {
+          return (
+            <Mask key={i}>
+              <m.span variants={textVariants}>{item.text}</m.span>
+            </Mask>
+          );
+        })}
+      </P>
+    </LazyMotion>
   );
 }
 
-const P = styled(motion.p)`
+const P = styled(m.p)`
   margin-left: -0.16em;
   margin-right: -0.16em;
 `;
