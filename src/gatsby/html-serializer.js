@@ -33,7 +33,7 @@ var htmlSerializer = function (type, element, content, children) {
     case Elements.oList:
       return `<ol>${children.join("")}</ol>`;
     case Elements.image:
-      var linkUrl = element.linkTo
+      var imageLinkUrl = element.linkTo
         ? PrismicDOM.Link.url(element.linkTo, module.exports.linkResolver)
         : null;
       var linkTarget =
@@ -46,7 +46,11 @@ var htmlSerializer = function (type, element, content, children) {
       }" copyright="${element.copyright || ""}">`;
       return `
         <p class="${wrapperClassList.join(" ")}">
-          ${linkUrl ? `<a ${linkTarget} href="${linkUrl}">${img}</a>` : img}
+          ${
+            imageLinkUrl
+              ? `<a ${linkTarget} href="${imageLinkUrl}">${img}</a>`
+              : img
+          }
         </p>
       `;
     case Elements.embed:

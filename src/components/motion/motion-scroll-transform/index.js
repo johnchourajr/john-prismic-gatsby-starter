@@ -137,7 +137,7 @@ function MotionScrollTransform({
      */
     setSectionTop(offsetTop);
     setSectionBottom(offsetBottom);
-  }, [scrollY, width, height, moveSectionRef]);
+  }, [scrollY, width, height, moveSectionRef, anchorTop]);
 
   /**
    * Transform Hooks
