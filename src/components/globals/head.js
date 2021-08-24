@@ -14,10 +14,8 @@ export const meta = {
  *
  * @param {Object} props
  */
-function Head({ pageContext }) {
-  const title = `${meta.siteTitle} ${
-    pageContext.title && `— ${pageContext.title}`
-  }`;
+function Head({ context }) {
+  const title = `${meta.siteTitle}`;
 
   return (
     <Helmet
@@ -33,13 +31,11 @@ function Head({ pageContext }) {
         // Open Graph / Facebook
         { property: "og:type", content: "website" },
         { property: "og:url", content: meta.siteUrl },
-        { property: "og:title", content: title },
         { property: "og:description", content: meta.description },
         { property: "og:image", content: `${meta.siteUrl}${meta.og}` },
         // Twitter
         { property: "twitter:card", content: "summary_large_image" },
         { property: "twitter:url", content: meta.siteUrl },
-        { property: "twitter:title", content: title },
         { property: "twitter:description", content: meta.description },
         { property: "twitter:image", content: `${meta.siteUrl}${meta.og}` },
       ]}

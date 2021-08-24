@@ -12,13 +12,13 @@ import Link from "../helpers/link";
  * Footer component
  *
  * @param {Object} props
- * @param {Object} props.pageContext
+ * @param {Object} props.context
  */
-export default function Footer({ pageContext }) {
+export default function Footer({ context }) {
   const navData = useNavData();
 
   return (
-    <FooterContainer id="footer" data-page={pageContext.uid}>
+    <FooterContainer id="footer" data-page={context.uid}>
       <FooterRow className="links">
         <FooterLinksWrapper>
           {navData.map(({ node: { data, uid } }, i) => {

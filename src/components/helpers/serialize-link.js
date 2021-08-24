@@ -3,7 +3,6 @@ import { linkResolver } from "../../functions/linkResolver";
 import Link from "./link";
 
 export const SerializeLink = (type, element, content, children, index) => {
-  // console.log(content);
   if (element.data.link_type === "Document") {
     return (
       <Link to={linkResolver(element.data)} key={element.data.id}>

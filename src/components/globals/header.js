@@ -48,7 +48,7 @@ const InlineHeader = ({ title, yTransform, useTransform }) => {
 export default function PageHeader({ title }) {
   return (
     <LazyMotion features={domAnimation}>
-      <MotionScrollTransform>
+      <MotionScrollTransform id="page-header">
         {(useTransform, yTransform) => (
           <Wrapper>
             <InlineHeader

@@ -20,19 +20,15 @@ import { PageWrapper } from "../components/globals/wrappers";
  * @param {Object} props.pageContext
  * @returns page layouts
  */
-export default function Layout({ children, pageContext, ...rest }) {
-  useEffect(() => {
-    return () => {};
-  });
-  console.log(rest);
+export default function Layout({ children, ...rest }) {
   return (
     <>
-      <Head pageContext={pageContext} />
-      <Nav pageContext={pageContext} />
+      <Head context={rest} />
+      <Nav context={rest} />
       <PageWrapper>
         <main id="main">{children}</main>
       </PageWrapper>
-      <Footer pageContext={pageContext} />
+      <Footer context={rest} />
     </>
   );
 }
