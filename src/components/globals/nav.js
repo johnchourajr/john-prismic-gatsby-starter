@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { m, LazyMotion, domAnimation, useViewportScroll } from "framer-motion";
 import Link from "../helpers/link";
+import LinkExternal from "../helpers/link-external";
 
 /**
  * Data hooks
  */
 import useNavData from "../../hooks/use-nav-data";
+import SvgLoader from "../svg/index";
 
 /**
  * Nav component
@@ -61,6 +63,12 @@ export default function Nav(props) {
               </Link>
             );
           })}
+          <LinkExternal
+            href="https://github.com/johnchourajr/john-prismic-gatsby-starter"
+            blank
+          >
+            <SvgLoader svg="GitHub" color="black" />
+          </LinkExternal>
         </NavLinksWrapper>
       </NavWrapper>
     </LazyMotion>

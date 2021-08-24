@@ -34,7 +34,7 @@ export function HomeTemplate({
 const Background = createGlobalStyle`
   @keyframes animation {
     0% {
-      background-color: #95cbf5;
+      background-color: #FDFF90;
     }
     20% {
       background-color: #B9FF82;
