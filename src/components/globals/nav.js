@@ -101,5 +101,8 @@ const NavLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: ${(props) => props.theme.layout.space[200]};
+
+  > * {
+    padding-left: ${(props) => props.theme.layout.space[200]};
+  }
 `;

@@ -2,19 +2,29 @@ require("dotenv").config({
   path: `.env`,
 });
 
-const { siteMetadata } = require("./jpgs-config");
 const prismicHtmlSerializer = require("./src/gatsby/html-serializer");
+
+/**
+ * SAMPLE .env file
+
+PRISMIC_REPO=
+PRISMIC_API_KEY=""
+
+ */
 
 module.exports = {
   siteMetadata: {
-    ...siteMetadata,
+    title: "john-prismic-gatsby-starter",
+    description: "john-prismic-gatsby-starter",
+    siteUrl: "https://jpgs.john.design/",
+    ogImage: "",
   },
   plugins: [
     {
       resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: `${process.env.REPO}`,
-        accessToken: `${process.env.API_KEY}`,
+        repositoryName: `${process.env.PRISMIC_REPO}`,
+        accessToken: `${process.env.PRISMIC_API_KEY}`,
         linkResolver: require("./src/functions/linkResolver").linkResolver,
         htmlSerializer: () => prismicHtmlSerializer,
         schemas: {
@@ -28,8 +38,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: siteMetadata.title,
-        short_name: siteMetadata.title,
+        title: "john-prismic-gatsby-starter",
+        short_name: "john-prismic-gatsby-starter",
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#000000`,

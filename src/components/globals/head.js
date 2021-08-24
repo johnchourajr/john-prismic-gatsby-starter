@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { siteMetadata } from "../../../jpgs-config";
+import { siteMetadata } from "../../../gatsby-config";
 
 export const meta = {
   siteUrl: siteMetadata.siteUrl,
