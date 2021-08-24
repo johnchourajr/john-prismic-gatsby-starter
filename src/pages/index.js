@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import { Wrapper } from "../components/globals/wrappers";
 import PageHeader from "../components/globals/header";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Box from "../components/motion/motion-box";
 import RichText from "../components/helpers/rich-text";
 
@@ -20,6 +20,7 @@ export function HomeTemplate({
 }) {
   return (
     <>
+      <Background />
       <PageHeader title={data.headline ? data.headline : data.title} />
       <Grid>
         <Box>
@@ -29,6 +30,33 @@ export function HomeTemplate({
     </>
   );
 }
+
+const Background = createGlobalStyle`
+  @keyframes animation {
+    0% {
+      background-color: #95cbf5;
+    }
+    20% {
+      background-color: #B9FF82;
+    }
+    40% {
+      background-color: #626AFE;
+    }
+    60% {
+      background-color: #D646BD;
+    }
+    80% {
+      background-color: #FF5A5A;
+    }
+    100% {
+      background-color: #FDFF90;
+    }
+  }
+
+  body {
+    animation: animation 10s linear infinite running;
+  }
+`;
 
 const Grid = styled(Wrapper)`
   max-width: 100%;

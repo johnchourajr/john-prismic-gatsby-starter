@@ -48,7 +48,6 @@ const RichWrap = styled(Wrapper)`
 
   strong {
     font-family: monospace;
-    font-weight: bold;
     padding: 0.2rem 0.3rem;
     border-radius: 0.25rem;
     background: ${({ theme }) => theme.colors.gray5};
@@ -67,12 +66,16 @@ const RichWrap = styled(Wrapper)`
 
   pre {
     font-family: monospace;
-    font-weight: bold;
     border: 2px solid ${({ theme }) => theme.colors.black};
     background: ${({ theme }) => theme.colors.gray5};
     padding: 1rem;
     border-radius: 0.5rem;
     line-height: 1.5;
+    white-space: pre-wrap;
+
+    @media ${({ theme }) => theme.device.laptop} {
+      width: 55vw;
+    }
   }
 `;
 
