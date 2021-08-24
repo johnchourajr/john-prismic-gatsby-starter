@@ -21,20 +21,58 @@ export default function Template({
   return (
     <>
       <PageHeader title={data.headline ? data.headline : data.title} />
-      <Grid>
+      <RichWrap>
         <Box>
           <RichText render={data.body.raw} />
         </Box>
-      </Grid>
+      </RichWrap>
     </>
   );
 }
 
-const Grid = styled(Wrapper)`
+const RichWrap = styled(Wrapper)`
   max-width: 100%;
 
-  @media ${(props) => props.theme.device.laptop} {
+  @media ${({ theme }) => theme.device.laptop} {
     max-width: 50%;
+  }
+
+  ol {
+    list-style: numbered;
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  strong {
+    font-family: monospace;
+    font-weight: bold;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.25rem;
+    background: ${({ theme }) => theme.colors.gray5};
+
+    em {
+      opacity: 0.5;
+    }
+  }
+
+  h6 {
+    strong {
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  pre {
+    font-family: monospace;
+    font-weight: bold;
+    border: 2px solid ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.gray5};
+    padding: 1rem;
+    border-radius: 0.5rem;
+    line-height: 1.5;
   }
 `;
 

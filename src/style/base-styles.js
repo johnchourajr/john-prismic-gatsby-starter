@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const BaseStyles = createGlobalStyle`
 
+  @font-face{font-family:LabilGrotesk-Medium;font-weight:600;src:url("https://d33wubrfki0l68.cloudfront.net/d4fce2dfe158a380483a5d7884d350baca4eb0b1/72091/fonts/labilgrotesk-medium.otf") format("otf"),url("https://d33wubrfki0l68.cloudfront.net/90bbe4766342a5009e2179c5b4d31087f7562a56/e862e/fonts/labilgrotesk-medium.woff") format("woff"),url("https://d33wubrfki0l68.cloudfront.net/4b55aaeba746577e3a4595b1f8eed9e5e407289e/d3458/fonts/labilgrotesk-medium.woff2") format("woff2");font-weight:400;font-style:normal}
+
   html {
     scroll-behavior: smooth;
   }
@@ -12,7 +14,7 @@ const BaseStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'GTHaptikRegular', sans-serif;
+    font-family: "LabilGrotesk-Medium", sans-serif;
     background-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.black};
     fill: ${({ theme }) => theme.colors.black};
@@ -115,18 +117,12 @@ const BaseStyles = createGlobalStyle`
   .h5 {
     font-size: ${(props) => props.theme.fonts.h5};
     line-height: 130%;
-    font-feature-settings: 'ss02' on, 'ss05' on, 'cpsp' on, 'calt' off,
-      'liga' off;
   }
 
   h6,
   .h6 {
     font-size: ${(props) => props.theme.fonts.h6};
     line-height: 130%;
-    letter-spacing: 0.105em;
-    text-transform: uppercase;
-    font-feature-settings: 'ss02' on, 'ss05' on, 'cpsp' on, 'calt' off,
-      'liga' off;
   }
 
   p,
@@ -135,8 +131,6 @@ const BaseStyles = createGlobalStyle`
     font-style: normal;
     font-size: 16px;
     line-height: 200%;
-    font-feature-settings: 'ss05' on, 'ss03' on, 'ss07' on, 'calt' off,
-      'liga' off;
 
     &.strong {
       font-weight: 500;
@@ -147,8 +141,6 @@ const BaseStyles = createGlobalStyle`
   .p-lead {
     font-size: 24px;
     line-height: 200%;
-    font-feature-settings: 'ss05' on, 'ss03' on, 'ss07' on, 'calt' off,
-      'liga' off;
   }
 
   p.caption,
@@ -156,8 +148,6 @@ const BaseStyles = createGlobalStyle`
     font-size: 11px;
     line-height: 170%;
     letter-spacing: 0.01em;
-    font-feature-settings: 'ss05' on, 'ss03' on, 'ss07' on, 'calt' off,
-      'liga' off;
   }
 
   a {

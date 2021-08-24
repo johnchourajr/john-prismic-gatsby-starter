@@ -71,5 +71,5 @@ const PageHeaderWrapper = styled(m.div)`
   overflow: visible;
   min-height: 50vw;
   padding: 15vw 0 10vw;
-  max-width: 55em;
+  max-width: 58em;
 `;
