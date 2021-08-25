@@ -15,8 +15,10 @@ PRISMIC_API_KEY=""
 module.exports = {
   siteMetadata: {
     title: "john-prismic-gatsby-starter",
+    short_name: "JPGS",
     description: "john-prismic-gatsby-starter",
     siteUrl: "https://jpgs.john.design/",
+    author: "John Choura",
     ogImage: "",
   },
   plugins: [

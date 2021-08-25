@@ -7,6 +7,7 @@ import styled from "styled-components";
 import LinkExternal from "../helpers/link-external";
 import useNavData from "../../hooks/use-nav-data";
 import Link from "../helpers/link";
+import { siteMetadata } from "../../../gatsby-config";
 
 /**
  * Footer component
@@ -31,8 +32,17 @@ export default function Footer({ context }) {
           })}
         </FooterLinksWrapper>
         <LegalWrapper>
-          © Copyright 2021 John Choura. Site by{" "}
-          <LinkExternal href="https://john.design">John Choura</LinkExternal>.
+          © Copyright 2021 {siteMetadata.author}.
+          {siteMetadata.author === "John Choura" && ( // DELETE ME
+            <>
+              {" "}
+              Site by{" "}
+              <LinkExternal href="https://john.design">
+                John Choura
+              </LinkExternal>
+              .
+            </>
+          )}
         </LegalWrapper>
       </FooterRow>
     </FooterContainer>

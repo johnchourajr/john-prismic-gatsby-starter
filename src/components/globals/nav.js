@@ -9,6 +9,7 @@ import LinkExternal from "../helpers/link-external";
  */
 import useNavData from "../../hooks/use-nav-data";
 import SvgLoader from "../svg/index";
+import { siteMetadata } from "../../../gatsby-config";
 
 /**
  * Nav component
@@ -52,7 +53,7 @@ export default function Nav(props) {
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.8 }}
       >
         <Link className="button" to="/">
-          JPGS
+          {siteMetadata.short_name}
         </Link>
         <NavLinksWrapper>
           {navData.map(({ node: { data, uid } }, i) => {
@@ -63,12 +64,14 @@ export default function Nav(props) {
               </Link>
             );
           })}
-          <LinkExternal
-            href="https://github.com/johnchourajr/john-prismic-gatsby-starter"
-            blank
-          >
-            <SvgLoader svg="GitHub" color="black" />
-          </LinkExternal>
+          {siteMetadata.short_name === "JPGS" && ( // DELETE ME
+            <LinkExternal
+              href="https://github.com/johnchourajr/john-prismic-gatsby-starter"
+              blank
+            >
+              <SvgLoader svg="GitHub" color="black" />
+            </LinkExternal>
+          )}
         </NavLinksWrapper>
       </NavWrapper>
     </LazyMotion>
