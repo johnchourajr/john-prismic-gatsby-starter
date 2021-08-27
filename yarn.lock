@@ -1707,6 +1707,13 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@prismicio/client@6.0.0-alpha.8":
+  version "6.0.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.0.0-alpha.8.tgz#fdd086032e823b964ef63651b4a2aa9bedf29109"
+  integrity sha512-zp3c8mZ/Sm2tQdZCASGEEx2UGJnYS1elFwTEca7M2y/Qi3hPM+Agp4xNMM5UoAg+2m1VFAt151vfaEscc5q4Gw==
+  dependencies:
+    "@prismicio/helpers" "^2.0.0-alpha.3"
+
 "@prismicio/client@^6.0.0-alpha.8":
   version "6.0.0-alpha.10"
   resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-6.0.0-alpha.10.tgz#beaf5e06c670d2104e3a0106d777657c687fa4b3"
@@ -7082,13 +7089,13 @@ gatsby-source-graphql@^2.0.8:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-source-prismic@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-4.1.0.tgz#fda5af059c7af6e02139d0a21011ea0293653553"
-  integrity sha512-AKGCBzb7bekIrh2wMwflR2o9lF/xuQSNO3xFQUxCfblDDtY7h9osu4ica2VYsA4ozy7ABgpYSHVyaS3bZan8qA==
+gatsby-source-prismic@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-4.1.2.tgz#8477fb4155c35dc15733e7fd2a734c748f80fbda"
+  integrity sha512-fghtpx8+dPQn5orVbwrB6E3WVVRw9HuRAAYkvsStZ0a5oaKOY3kgxkt9qrGRLjuR4z9haxaOBlpSHq16TJH6xA==
   dependencies:
     "@imgix/gatsby" "^1.6.11"
-    "@prismicio/client" "^6.0.0-alpha.8"
+    "@prismicio/client" "6.0.0-alpha.8"
     "@prismicio/custom-types-client" "^0.0.4"
     "@prismicio/helpers" "^2.0.0-alpha.4"
     "@prismicio/types" "^0.1.6"

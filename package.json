@@ -35,7 +35,7 @@
     "gatsby-plugin-styled-components": "^3.9.0",
     "gatsby-remark-images": "^3.11.0",
     "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-source-prismic": "^4.1.0",
+    "gatsby-source-prismic": "^4.1.2",
     "gatsby-transformer-remark": "^2.16.0",
     "gatsby-transformer-sharp": "^2.9.0",
     "prismic-dom": "^2.2.6",
