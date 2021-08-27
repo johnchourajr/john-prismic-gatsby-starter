@@ -32,6 +32,7 @@ module.exports = {
         schemas: {
           page: require("./src/schemas/page.json"),
           homepage: require("./src/schemas/homepage.json"),
+          mediapage: require("./src/schemas/mediapage.json"),
         },
         lang: "en-us",
       },
