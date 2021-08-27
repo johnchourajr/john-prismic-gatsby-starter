@@ -30,7 +30,6 @@ module.exports = {
         linkResolver: require("./src/functions/linkResolver").linkResolver,
         htmlSerializer: () => prismicHtmlSerializer,
         schemas: {
-          // mediapage: require("./src/schemas/mediapage.json"),
           page: require("./src/schemas/page.json"),
           homepage: require("./src/schemas/homepage.json"),
         },
