@@ -1,12 +1,13 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { siteMetadata } from "../../../gatsby-config";
 
-export const meta = {
-  siteUrl: siteMetadata.siteUrl,
-  siteTitle: siteMetadata.title,
-  description: siteMetadata.description,
-  og: siteMetadata.ogImage,
+export const siteMetadata = {
+  siteUrl: "https://jpgs.john.design/",
+  siteTitle: "john-prismic-gatsby-starter",
+  description: "john-prismic-gatsby-starter",
+  short_name: "JPGS",
+  author: "John Choura",
+  og: "",
 };
 
 /**
@@ -15,7 +16,7 @@ export const meta = {
  * @param {Object} props
  */
 function Head({ context }) {
-  const title = `${meta.siteTitle}`;
+  const title = `${siteMetadata.siteTitle}`;
 
   return (
     <Helmet
@@ -27,17 +28,23 @@ function Head({ context }) {
           content: "width=device-width, initial-scale=1, shrink-to-fit=yes",
         },
         { name: "title", content: title },
-        { name: "description", content: meta.description },
+        { name: "description", content: siteMetadata.description },
         // Open Graph / Facebook
         { property: "og:type", content: "website" },
-        { property: "og:url", content: meta.siteUrl },
-        { property: "og:description", content: meta.description },
-        { property: "og:image", content: `${meta.siteUrl}${meta.og}` },
+        { property: "og:url", content: siteMetadata.siteUrl },
+        { property: "og:description", content: siteMetadata.description },
+        {
+          property: "og:image",
+          content: `${siteMetadata.siteUrl}${siteMetadata.og}`,
+        },
         // Twitter
         { property: "twitter:card", content: "summary_large_image" },
-        { property: "twitter:url", content: meta.siteUrl },
-        { property: "twitter:description", content: meta.description },
-        { property: "twitter:image", content: `${meta.siteUrl}${meta.og}` },
+        { property: "twitter:url", content: siteMetadata.siteUrl },
+        { property: "twitter:description", content: siteMetadata.description },
+        {
+          property: "twitter:image",
+          content: `${siteMetadata.siteUrl}${siteMetadata.og}`,
+        },
       ]}
     />
   );

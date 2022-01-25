@@ -9,7 +9,7 @@ import LinkExternal from "../helpers/link-external";
  */
 import useNavData from "../../hooks/use-nav-data";
 import SvgLoader from "../svg/index";
-import { siteMetadata } from "../../../gatsby-config";
+import { siteMetadata } from "./head";
 
 /**
  * Nav component

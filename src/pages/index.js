@@ -24,7 +24,7 @@ export function HomeTemplate({
       <PageHeader title={data.headline ? data.headline : data.title} />
       <Grid>
         <Box>
-          <RichText render={data.body.raw} />
+          <RichText render={data.body.richText} />
         </Box>
       </Grid>
     </>
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
         title
         headline
         body {
-          raw
+          richText
           text
           html
         }

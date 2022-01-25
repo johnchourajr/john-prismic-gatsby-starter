@@ -136,6 +136,7 @@ export const layout = {
   },
 };
 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
   device: device,
   colors: colors,
