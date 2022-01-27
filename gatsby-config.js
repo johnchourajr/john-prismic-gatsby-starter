@@ -32,6 +32,9 @@ module.exports = {
         schemas: {
           page: require("./src/schemas/page.json"),
           homepage: require("./src/schemas/homepage.json"),
+          post: require("./src/schemas/homepage.json"),
+          profile: require("./src/schemas/homepage.json"),
+          sitemeta: require("./src/schemas/homepage.json"),
         },
         lang: "en-us",
       },

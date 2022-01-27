@@ -23,7 +23,7 @@ export default function Template({
       <PageHeader title={data.headline ? data.headline : data.title} />
       <RichWrap>
         <Box>
-          <RichText render={data.body.raw} />
+          <RichText render={data.body.richText} />
         </Box>
       </RichWrap>
     </>
@@ -90,7 +90,7 @@ export const pageQuery = graphql`
         title
         headline
         body {
-          raw
+          richText
           text
           html
         }

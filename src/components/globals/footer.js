@@ -7,7 +7,7 @@ import styled from "styled-components";
 import LinkExternal from "../helpers/link-external";
 import useNavData from "../../hooks/use-nav-data";
 import Link from "../helpers/link";
-import { siteMetadata } from "../../../gatsby-config";
+import { siteMetadata } from "./head";
 
 /**
  * Footer component
@@ -17,6 +17,8 @@ import { siteMetadata } from "../../../gatsby-config";
  */
 export default function Footer({ context }) {
   const navData = useNavData();
+  const d = new Date();
+  let year = d.getFullYear();
 
   return (
     <FooterContainer id="footer" data-page={context.uid}>
@@ -32,7 +34,7 @@ export default function Footer({ context }) {
           })}
         </FooterLinksWrapper>
         <LegalWrapper>
-          © Copyright 2021 {siteMetadata.author}.
+          © Copyright {year} {siteMetadata.author}.
           {siteMetadata.author === "John Choura" && ( // DELETE ME
             <>
               {" "}
