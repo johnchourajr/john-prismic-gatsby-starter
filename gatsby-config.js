@@ -72,6 +72,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-layouts",
+    `gatsby-plugin-preact`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
   ],
