@@ -1,3 +1,5 @@
+import path from "path";
+
 require("dotenv").config({
   path: `.env`,
 });
@@ -61,7 +63,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images/`,
+        path: path.resolve(`src/images`),
       },
       __key: "images",
     },

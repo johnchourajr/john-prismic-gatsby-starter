@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const BaseStyles = createGlobalStyle`
 
-  @font-face{font-family:LabilGrotesk-Medium;font-weight:600;src:url("https://d33wubrfki0l68.cloudfront.net/d4fce2dfe158a380483a5d7884d350baca4eb0b1/72091/fonts/labilgrotesk-medium.otf") format("otf"),url("https://d33wubrfki0l68.cloudfront.net/90bbe4766342a5009e2179c5b4d31087f7562a56/e862e/fonts/labilgrotesk-medium.woff") format("woff"),url("https://d33wubrfki0l68.cloudfront.net/4b55aaeba746577e3a4595b1f8eed9e5e407289e/d3458/fonts/labilgrotesk-medium.woff2") format("woff2");font-weight:400;font-style:normal}
+  @font-face{font-family:LabilGrotesk-Medium;font-weight:600;src:url("https://d33wubrfki0l68.cloudfront.net/4b55aaeba746577e3a4595b1f8eed9e5e407289e/d3458/fonts/labilgrotesk-medium.woff2") format("woff2");font-weight:400;font-style:normal}
 
   html {
     scroll-behavior: smooth;

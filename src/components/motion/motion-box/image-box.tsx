@@ -1,12 +1,13 @@
 import React from "react";
-import Img from "gatsby-image";
-import Box from ".";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Box from "./index.tsx";
 import styled from "styled-components";
 
-export default function ImageBox({ fluid, ...rest }) {
+function ImageBox({ src, alt, ...rest }) {
+  const image = getImage(src);
   return (
     <ImageBoxWrap {...rest}>
-      <Img fluid={fluid} />
+      <GatsbyImage image={image} alt={alt} />
     </ImageBoxWrap>
   );
 }
@@ -18,3 +19,5 @@ const ImageBoxWrap = styled(Box)`
     overflow: hidden;
   }
 `;
+
+export { ImageBox };
