@@ -1,15 +1,24 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { m, LazyMotion, domAnimation, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { TransitionDefinition } from "framer-motion/types/types";
 
-export default function Box({
+interface BoxProps {
+  children: React.ReactNode;
+  transitionOverrides?: TransitionDefinition;
+  hiddenStyles?: object;
+  visibleStyles?: object;
+  triggerOnce?: boolean;
+}
+
+const Box: FC<BoxProps> = ({
   children,
   transitionOverrides,
   hiddenStyles,
   visibleStyles,
   triggerOnce = true,
   ...rest
-}) {
+}) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: triggerOnce });
 
@@ -52,3 +61,5 @@ export default function Box({
     </LazyMotion>
   );
 }
+
+export default Box

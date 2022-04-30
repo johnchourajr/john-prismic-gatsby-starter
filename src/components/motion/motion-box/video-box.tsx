@@ -1,8 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 import Box from ".";
 import VideoCover from "../../inline-video";
 
-export default function VideoBox({ video, ...rest }) {
+interface VideoBoxProps {
+  video: {
+    url: string
+  }
+}
+
+const VideoBox: FC<VideoBoxProps> = ({ video, ...rest }) => {
   const videoOptions = {
     autoPlay: true,
     playsInline: true,
@@ -21,3 +27,5 @@ export default function VideoBox({ video, ...rest }) {
     </Box>
   );
 }
+
+export default VideoBox;

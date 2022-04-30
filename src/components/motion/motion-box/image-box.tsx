@@ -1,13 +1,13 @@
-import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Box from "./index.tsx";
+import React, { FC } from "react";
+import { GatsbyImage, GatsbyImageProps, getImage, ImageDataLike } from "gatsby-plugin-image";
+import Box from "./index";
 import styled from "styled-components";
 
-function ImageBox({ src, alt, ...rest }) {
-  const image = getImage(src);
+const ImageBox: FC<GatsbyImageProps> = ({ image, alt, ...rest }) => {
+  const img = getImage(image);
   return (
     <ImageBoxWrap {...rest}>
-      <GatsbyImage image={image} alt={alt} />
+      <GatsbyImage image={img} alt={alt} />
     </ImageBoxWrap>
   );
 }
@@ -20,4 +20,4 @@ const ImageBoxWrap = styled(Box)`
   }
 `;
 
-export { ImageBox };
+export default ImageBox;
