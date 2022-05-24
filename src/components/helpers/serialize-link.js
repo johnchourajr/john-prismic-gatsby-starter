@@ -2,15 +2,7 @@ import React from "react";
 import { linkResolver } from "../../functions/linkResolver";
 import Link from "./link";
 
-interface SerializeLinkProps {
-  type: string;
-  element: any;
-  content: any;
-  children: any;
-  index: number;
-}
-
-export const SerializeLink = ({element, content}: SerializeLinkProps) => {
+export const SerializeLink = ({ element, content }) => {
   if (element.data.link_type === "Document") {
     return (
       <Link to={linkResolver(element.data)} key={element.data.id}>

@@ -6,12 +6,18 @@ import { useInView } from "react-intersection-observer";
 import { wrapHeadlineInArray } from "../../../functions/util";
 import { animation } from "../../../style/theme";
 
+interface MotionHeadlineProps {
+  text: string;
+  staggerChildren: number;
+  triggerOnce: boolean;
+}
+
 export default function MotionHeadline({
   text,
   staggerChildren = 0.1,
   triggerOnce = true,
   ...rest
-}) {
+}: MotionHeadlineProps) {
   const controls = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: triggerOnce });
 
