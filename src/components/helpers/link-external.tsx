@@ -1,7 +1,13 @@
 import React from "react";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 
-function LinkExternal({ href, blank, children, hoverData, ...rest }) {
+interface LinkExternalProps {
+  href?: string;
+  blank?: boolean;
+  children?: React.ReactNode;
+}
+
+const LinkExternal = ({ href, blank = false, children, ...rest }: LinkExternalProps) => {
   return (
     <LazyMotion features={domAnimation}>
       <m.a

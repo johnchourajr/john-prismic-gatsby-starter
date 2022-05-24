@@ -1,4 +1,4 @@
-exports.linkResolver = (doc) => {
+exports.linkResolver = (doc: any) => {
   // URL for a category type
   if (doc.type === "category") {
     return `/category/${doc.uid}`;

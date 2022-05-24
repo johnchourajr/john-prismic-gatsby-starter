@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import LinkExternal from '../link-external';
+import React from "react";
+import styled from "styled-components";
+import LinkExternal from "../helpers/link-external";
 
 export function Button({ children, text, href, icon, ...rest }) {
   return (

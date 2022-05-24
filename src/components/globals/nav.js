@@ -13,10 +13,8 @@ import { siteMetadata } from "./head";
 
 /**
  * Nav component
- *
- * @param {Object} props
  */
-export default function Nav(props) {
+export default function Nav() {
   const navData = useNavData();
   const { scrollY } = useViewportScroll();
   const [hidden, setHidden] = React.useState(false);
