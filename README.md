@@ -1,3 +1,18 @@
+> [!WARNING]
+> ## This starter is no longer maintained
+>
+> It was last updated in May 2022 and targets Gatsby 4 with Prismic. Building on
+> it today means inheriting four years of unpatched dependencies.
+>
+> **Use [`buen-next-starter`](https://github.com/johnchourajr/buen-next-starter)
+> instead**, live at **[next-starter.muybuen.dev](https://next-starter.muybuen.dev/)**.
+> It is the current Next.js starter and is actively maintained.
+>
+> `jpgs.john.design` now redirects there. This repository is archived and kept
+> read-only for reference.
+
+---
+
 <h1 align="center">
 JPGS
 </h1>
